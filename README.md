@@ -18,7 +18,7 @@
    ```bash
    git clone https://github.com/Kantanistka/web2025.git
    cd nginx-lab
-Запустить контейнеры:
+2. Запустить контейнеры:
 ```bash
 docker-compose up -d --build
 ```
