@@ -6,35 +6,39 @@
 <body>
     <h1>Оформление подписки на журнал</h1>
 
-    <div>
-        <label for="userName">Ваше Имя:</label>
-        <input type="text" id="userName" name="userName">
-    </div>
-    <div>
-        <label for="endDate">Дата окончания подписки:</label>
-        <input type="date" id="endDate" name="endDate" required>
-    </div>
-    <div>
-        <label for="magazine">Выберите Журнал:</label>
-        <select id="magazine" name="magazine" required>
-            <option value="">пупупу</option>
-        </select>
-    </div>
+    <form>
 
-    <div>
-        <input type="checkbox" id="eVersion" name="eVersion">
-        <label for="eVersion">Электронная версия</label>
-    </div>
+        <div>
+            <label for="userName">Ваше Имя:</label>
+            <input type="text" id="userName" name="userName">
+        </div>
+        <div>
+            <label for="endDate">Дата окончания подписки:</label>
+            <input type="date" id="endDate" name="endDate" required>
+        </div>
+        <div>
+            <label for="magazine">Выберите Журнал:</label>
+            <select id="magazine" name="magazine" required>
+                <option value="test">пупупу</option>
+            </select>
+        </div>
 
-    <div>
-        <label>Формат оплаты:</label>
-        <input type="radio" id="card" name="paymentFormat">
-        <label for="card">Банковская карта</label>
+        <div>
+            <input type="checkbox" id="eVersion" name="eVersion">
+            <label for="eVersion">Электронная версия</label>
+        </div>
 
-        <input type="radio" id="sbp" name="paymentFormat">
-        <label for="sbp">СБП</label>
-    </div>
-    <button type="submit">Подтвердить</button>
+        <div>
+            <label>Формат оплаты:</label>
+            <input type="radio" id="card" name="paymentFormat">
+            <label for="card">Банковская карта</label>
+
+            <input type="radio" id="sbp" name="paymentFormat">
+            <label for="sbp">СБП</label>
+        </div>
+        <button type="submit">Подтвердить</button>
+
+    </form>
 
     <div id="result">
 
