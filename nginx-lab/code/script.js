@@ -1,3 +1,5 @@
+const form = document.getElementById("subsForm");
+
 const resultDiv = document.getElementById("result");
 
 form.addEventListener("submit", function(e) {
