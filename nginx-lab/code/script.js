@@ -1,9 +1,6 @@
 const form = document.getElementById("subsForm");
 
-const resultDiv = document.getElementById("result");
-
 form.addEventListener("submit", function(e) {
-    e.preventDefault();
 
     const formData = new FormData(this);
 
@@ -11,10 +8,7 @@ form.addEventListener("submit", function(e) {
 
       for (const [name, value] of formData.entries()) {
 
-            let displayValue = value;
-            output += `<p>${name}: ${displayValue}</p>`;
+            output += `<p>${name}: ${value}</p>`;
         }
 
-
-    resultDiv.innerHTML = output;
 });
