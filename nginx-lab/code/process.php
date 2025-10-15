@@ -16,6 +16,9 @@ $_SESSION['formData'] = [
     'paymentFormat' => $paymentFormat,
 ];
 
+$line = implode(";", $_SESSION['formData']) . "\n";
+file_put_contents("data.txt", $line, FILE_APPEND);
+
 header("Location: index.php");
 exit();
 ?>
