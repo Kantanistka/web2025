@@ -8,7 +8,7 @@ form.addEventListener("submit", function(e) {
 
       for (const [name, value] of formData.entries()) {
 
-            alertMessage += `<p>${name}: ${value}</p>`;
+            alertMessage += `${name}: ${value}\n`;
         }
       alert(alertMessage);
 });
