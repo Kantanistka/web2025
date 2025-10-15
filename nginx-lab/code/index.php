@@ -10,6 +10,18 @@ session_start();
 <body>
     <h1>Статус подписки</h1>
 
+    <?php if (isset($_SESSION['errors'])): ?>
+        <div style="color: red;">
+            <h3>Ошибки валидации:</h3>
+            <ul>
+                <?php foreach ($_SESSION['errors'] as $error): ?>
+                    <li><?= $error ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <?php unset($_SESSION['errors']);?>
+    <?php endif; ?>
+
     <?php if (isset($_SESSION['formData'])): ?>
         <div style="color: green;">
             <h3>🧩 Подписка успешно оформлена:</h3>

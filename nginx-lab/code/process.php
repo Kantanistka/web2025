@@ -1,6 +1,28 @@
 <?php
 session_start();
 
+$errors = [];
+
+if (empty($_POST['userName'])) {
+    $errors[] = "Имя не может быть пустым";
+}
+if (empty($_POST['endDate'])) {
+    $errors[] = "Дата окончания подписки не выбрана";
+}
+if (empty($_POST['magazine'])) {
+    $errors[] = "Журнал не выбран";
+}
+if (empty($_POST['paymentFormat'])) {
+    $errors[] = "Формат оплаты не выбран";
+}
+
+if (!empty($errors)) {
+    $_SESSION['errors'] = $errors;
+    header("Location: index.php");
+    exit();
+}
+
+
 $userName = htmlspecialchars($_POST['userName']);
 $endDate = htmlspecialchars($_POST['endDate']);
 $magazine = htmlspecialchars($_POST['magazine']);
