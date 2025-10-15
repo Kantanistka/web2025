@@ -10,5 +10,5 @@ form.addEventListener("submit", function(e) {
 
             alertMessage += `<p>${name}: ${value}</p>`;
         }
-
+      alert(alertMessage);
 });
