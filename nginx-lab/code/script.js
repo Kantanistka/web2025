@@ -4,11 +4,11 @@ form.addEventListener("submit", function(e) {
 
     const formData = new FormData(this);
 
-    let output = "<h3>🧩 подписка успешно оформлена</h3>";
+      let alertMessage = "Проверьте введённые данные:\n\n";
 
       for (const [name, value] of formData.entries()) {
 
-            output += `<p>${name}: ${value}</p>`;
+            alertMessage += `<p>${name}: ${value}</p>`;
         }
 
 });
