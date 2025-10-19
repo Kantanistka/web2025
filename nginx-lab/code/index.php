@@ -35,6 +35,13 @@ session_start();
         </div>
     <?php else: ?>
         <p>Данных о последней подписке пока нет.</p> <?php endif; ?>
+    <?php
+    if (isset($_SESSION['api_data'])) {
+        echo "<h3>Данные из API:</h3>";
+        echo "<pre>" . print_r($_SESSION['api_data'], true) . "</pre>";
+    }
+
+    ?>
 
     <hr>
     <a href="form.html">Заполнить форму ещё раз</a> |
