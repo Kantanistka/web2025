@@ -144,7 +144,8 @@ docker-compose up -d --build
 docker-compose up -d --build
 ```
 3. В папке code проекта выполните:
-```composer init
+```
+composer init
 composer require guzzlehttp/guzzle
 ```
 
