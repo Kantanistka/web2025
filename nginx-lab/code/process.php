@@ -41,6 +41,15 @@ $_SESSION['formData'] = [
 $line = implode(";", $_SESSION['formData']) . "\n";
 file_put_contents("data.txt", $line, FILE_APPEND);
 
+require_once 'ApiClient.php';
+$api = new ApiClient();
+
+$url = 'https://api.spaceflightnewsapi.net/v4/articles/'; // пример
+$apiData = $api->request($url);
+
+$_SESSION['api_data'] = $apiData;
+
+
 header("Location: index.php");
 exit();
 ?>
