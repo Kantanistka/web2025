@@ -41,6 +41,14 @@ session_start();
         echo "<pre>" . print_r($_SESSION['api_data'], true) . "</pre>";
     }
 
+    require_once 'UserInfo.php';
+    $info = UserInfo::getInfo();
+
+    echo "<h3>Информация о пользователе:</h3>";
+    foreach ($info as $key => $val) {
+        echo htmlspecialchars($key) . ': ' . htmlspecialchars($val) . '<br>';
+    }
+
     ?>
 
     <hr>
